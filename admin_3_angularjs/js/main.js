@@ -107,21 +107,21 @@ MetronicApp.controller('HeaderController', ['$scope', function($scope) {
     });
 }]);
 
-/* Setup Layout Part - Sidebar */
-MetronicApp.controller('SidebarController', ['$scope', function($scope) {
-    $scope.$on('$includeContentLoaded', function() {
-        Layout.initSidebar(); // init sidebar
-    });
-}]);
+// /* Setup Layout Part - Sidebar */
+// MetronicApp.controller('SidebarController', ['$scope', function($scope) {
+//     $scope.$on('$includeContentLoaded', function() {
+//         Layout.initSidebar(); // init sidebar
+//     });
+// }]);
 
-/* Setup Layout Part - Quick Sidebar */
-MetronicApp.controller('QuickSidebarController', ['$scope', function($scope) {    
-    $scope.$on('$includeContentLoaded', function() {
-       setTimeout(function(){
-            QuickSidebar.init(); // init quick sidebar        
-        }, 2000)
-    });
-}]);
+// /* Setup Layout Part - Quick Sidebar */
+// MetronicApp.controller('QuickSidebarController', ['$scope', function($scope) {    
+//     $scope.$on('$includeContentLoaded', function() {
+//        setTimeout(function(){
+//             QuickSidebar.init(); // init quick sidebar        
+//         }, 2000)
+//     });
+// }]);
 
 /* Setup Layout Part - Sidebar */
 MetronicApp.controller('PageHeadController', ['$scope', function($scope) {
@@ -147,29 +147,102 @@ MetronicApp.controller('FooterController', ['$scope', function($scope) {
 /* Setup Rounting For All Pages */
 MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     // Redirect any unmatched url
-    $urlRouterProvider.otherwise("/dashboard.html");  
+    $urlRouterProvider.otherwise("/home.html");  
     
     $stateProvider
 
-        // Dashboard
-        .state('dashboard', {
-            url: "/dashboard.html",
-            templateUrl: "views/dashboard.html",            
-            data: {pageTitle: 'Admin Dashboard Template'},
-            controller: "DashboardController",
+        // Home
+        .state('home', {
+            url: "/home.html",
+            templateUrl: "views/home.html",            
+            data: {pageTitle: 'Home'},
+            controller: "HomeController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
                     return $ocLazyLoad.load({
-                        name: 'MetronicApp',
+                        name: 'Home',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
                             '../assets/global/plugins/morris/morris.css',                            
                             '../assets/global/plugins/morris/morris.min.js',
                             '../assets/global/plugins/morris/raphael-min.js',                            
                             '../assets/global/plugins/jquery.sparkline.min.js',
+                            "../assets/layouts/layout3/css/custom.css",
+                            "../assets/global/plugins/socicon/socicon.css",
 
                             '../assets/pages/scripts/dashboard.min.js',
-                            'js/controllers/DashboardController.js',
+                            'js/controllers/HomeController.js',
+                        ] 
+                    });
+                }]
+            }
+        })
+        
+        // Blog
+        .state('blog', {
+            url: "/blog.html",
+            templateUrl: "views/blog/blog.html",            
+            data: {pageTitle: 'Blog'},
+            controller: "GeneralPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                        files: [
+                            "../assets/layouts/layout3/css/custom.css",
+                            "../assets/global/plugins/socicon/socicon.css",
+                            "../assets/pages/css/blog.min.css",
+                            
+                            'js/controllers/GeneralPageController.js',
+                        ] 
+                    });
+                }]
+            }
+        })
+        
+        // Blog
+        .state('testpost1', {
+            url: "/testpost.html",
+            templateUrl: "views/blog/test_post.html",            
+            data: {pageTitle: 'Test Post'},
+            controller: "GeneralPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                        files: [
+                            "../assets/layouts/layout3/css/custom.css",
+                            "../assets/global/plugins/socicon/socicon.css",
+                            "../assets/pages/css/blog.min.css",
+                            
+                            'js/controllers/GeneralPageController.js',
+                        ] 
+                    });
+                }]
+            }
+        })
+        
+        // Projects
+        .state('projects', {
+            url: "/projects.html",
+            templateUrl: "views/projects.html",            
+            data: {pageTitle: 'Projects'},
+            controller: "GeneralPageController",
+            resolve: {
+                deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                    return $ocLazyLoad.load({
+                        name: 'MetronicApp',
+                        insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+                        files: [
+                            "../assets/global/plugins/cubeportfolio/css/cubeportfolio.css",
+                            "../assets/pages/css/portfolio.min.css",
+                            "../assets/layouts/layout3/css/custom.css",
+                            "../assets/global/plugins/socicon/socicon.css",
+                            
+
+                            'js/controllers/GeneralPageController.js'
                         ] 
                     });
                 }]
