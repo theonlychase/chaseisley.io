@@ -7,3 +7,8 @@
 .header-padding {
     padding-top: 10px !important;
 }
+
+.cbp-l-project-desc-text a:hover {
+    color: #E35B5A;
+    text-decoration: none;
+}
