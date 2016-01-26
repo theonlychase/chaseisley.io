@@ -1,10 +1,10 @@
 <!-- BEGIN PAGE BREADCRUMB -->
-<ul class="page-breadcrumb breadcrumb">
+<ul class="page-breadcrumb breadcrumb hide">
     <li>
         <a href="#">Home</a>
         <i class="fa fa-circle"></i>
     </li>
-    <li class="active"> User Profile </li>
+    <li class="active"> Home </li>
 </ul>
 <!-- END PAGE BREADCRUMB -->
 <!-- BEGIN PAGE CONTENT-->
@@ -16,38 +16,34 @@
             <div class="portlet light profile-sidebar-portlet">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="{{settings.assetsPath}}/pages/media/profile/profile_user.jpg" class="img-responsive" alt=""> </div>
+                    <img src="http://i.imgur.com/k1irzKA.jpg" class="img-responsive" alt=""> </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
-                    <div class="profile-usertitle-name"> Marcus Doe </div>
-                    <div class="profile-usertitle-job"> Developer </div>
+                    <div class="profile-usertitle-name"> Chase Isley </div>
+                    <div class="profile-usertitle-job heading-red"> Developer </div>
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
-                <!-- SIDEBAR BUTTONS -->
-                <div class="profile-userbuttons">
+                 <!--SIDEBAR BUTTONS -->
+                <!--<div class="profile-userbuttons">
                     <button type="button" class="btn btn-circle green-haze btn-sm">Follow</button>
                     <button type="button" class="btn btn-circle btn-danger btn-sm">Message</button>
-                </div>
+                </div>-->
                 <!-- END SIDEBAR BUTTONS -->
                 <!-- SIDEBAR MENU -->
                 <div class="profile-usermenu">
                     <ul class="nav">
-                        <li ng-class="{active: $state.includes('profile.dashboard')}">
-                            <a ui-sref="profile.dashboard">
-                                <i class="icon-home"></i> Overview </a>
-                        </li>
-                        <li ng-class="{active: $state.includes('profile.account')}">
-                            <a ui-sref="profile.account">
-                                <i class="icon-settings"></i> Account Settings </a>
+                        <li ng-class="{active: $state.includes('home.about')}">
+                            <a ui-sref="about">
+                                <i class="icon-user"></i> About Me </a>
                         </li>
                         <li>
-                            <a href="#/todo">
-                                <i class="icon-check"></i> Tasks </a>
-                        </li>
-                        <li ng-class="{active: $state.includes('profile.help')}">
-                            <a ui-sref="profile.help">
-                                <i class="icon-info"></i> Help </a>
+                            <a ui-sref="projects">
+                                <i class="icon-rocket"></i> Projects </a>
+                        </li>                       
+                        <li>
+                            <a ui-sref="blog">
+                                <i class="icon-notebook"></i> Blog </a>
                         </li>
                     </ul>
                 </div>
@@ -59,33 +55,29 @@
                 <!-- STAT -->
                 <div class="row list-separated profile-stat">
                     <div class="col-md-4 col-sm-4 col-xs-6">
-                        <div class="uppercase profile-stat-title"> 37 </div>
-                        <div class="uppercase profile-stat-text"> Projects </div>
+                        <div class="uppercase profile-stat-title"> 8 </div>
+                        <div class="uppercase profile-stat-text heading-red"> Projects </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-6">
-                        <div class="uppercase profile-stat-title"> 51 </div>
-                        <div class="uppercase profile-stat-text"> Tasks </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-6">
-                        <div class="uppercase profile-stat-title"> 61 </div>
-                        <div class="uppercase profile-stat-text"> Uploads </div>
+                        <div class="uppercase profile-stat-title"> 3 </div>
+                        <div class="uppercase profile-stat-text heading-red"> In the Works </div>
                     </div>
                 </div>
                 <!-- END STAT -->
                 <div>
-                    <h4 class="profile-desc-title">About Marcus Doe</h4>
-                    <span class="profile-desc-text"> Lorem ipsum dolor sit amet diam nonummy nibh dolore. </span>
+                    <h4 class="profile-desc-title">Follow Me</h4>
+                    <span class="profile-desc-text"> I promise to follow you back! </span>
                     <div class="margin-top-20 profile-desc-link">
-                        <i class="fa fa-globe"></i>
-                        <a href="http://www.keenthemes.com">www.keenthemes.com</a>
+                        <i class="fa fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/chaseisley">LinkedIn/chaseisley</a>
                     </div>
                     <div class="margin-top-20 profile-desc-link">
                         <i class="fa fa-twitter"></i>
-                        <a href="http://www.twitter.com/keenthemes/">@keenthemes</a>
+                        <a href="https://twitter.com/Chase_Isley">@Chase_Isley</a>
                     </div>
                     <div class="margin-top-20 profile-desc-link">
-                        <i class="fa fa-facebook"></i>
-                        <a href="http://www.facebook.com/keenthemes/">keenthemes</a>
+                        <i class="fa fa-github"></i>
+                        <a href="https://github.com/theonlychase">Github</a>
                     </div>
                 </div>
             </div>

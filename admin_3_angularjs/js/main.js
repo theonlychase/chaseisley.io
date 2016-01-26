@@ -147,40 +147,40 @@ MetronicApp.controller('FooterController', ['$scope', function($scope) {
 /* Setup Rounting For All Pages */
 MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     // Redirect any unmatched url
-    $urlRouterProvider.otherwise("/home.html");  
+    $urlRouterProvider.otherwise("/home/about");  
     
     $stateProvider
 
-        // Home
-        .state('home', {
-            url: "/home.html",
-            templateUrl: "views/home.html",            
-            data: {pageTitle: 'Home'},
-            controller: "HomeController",
-            resolve: {
-                deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                    return $ocLazyLoad.load({
-                        name: 'Home',
-                        insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
-                        files: [
-                            '../assets/global/plugins/morris/morris.css',                            
-                            '../assets/global/plugins/morris/morris.min.js',
-                            '../assets/global/plugins/morris/raphael-min.js',                            
-                            '../assets/global/plugins/jquery.sparkline.min.js',
-                            "../assets/layouts/layout3/css/custom.css",
-                            "../assets/global/plugins/socicon/socicon.css",
+        // // Home
+        // .state('home2', {
+        //     url: "/home.html",
+        //     templateUrl: "views/home.html",            
+        //     data: {pageTitle: 'Home2'},
+        //     controller: "HomeController",
+        //     resolve: {
+        //         deps: ['$ocLazyLoad', function($ocLazyLoad) {
+        //             return $ocLazyLoad.load({
+        //                 name: 'Home',
+        //                 insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
+        //                 files: [
+        //                     '../assets/global/plugins/morris/morris.css',                            
+        //                     '../assets/global/plugins/morris/morris.min.js',
+        //                     '../assets/global/plugins/morris/raphael-min.js',                            
+        //                     '../assets/global/plugins/jquery.sparkline.min.js',
+        //                     "../assets/layouts/layout3/css/custom.css",
+        //                     "../assets/global/plugins/socicon/socicon.css",
 
-                            '../assets/pages/scripts/dashboard.min.js',
-                            'js/controllers/HomeController.js',
-                        ] 
-                    });
-                }]
-            }
-        })
+        //                     '../assets/pages/scripts/dashboard.min.js',
+        //                     'js/controllers/HomeController.js',
+        //                 ] 
+        //             });
+        //         }]
+        //     }
+        // })
         
         // Blog
         .state('blog', {
-            url: "/blog.html",
+            url: "/blog",
             templateUrl: "views/blog/blog.html",            
             data: {pageTitle: 'Blog'},
             controller: "GeneralPageController",
@@ -203,7 +203,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         
         // Blog
         .state('testpost1', {
-            url: "/testpost.html",
+            url: "/testpost",
             templateUrl: "views/blog/test_post.html",            
             data: {pageTitle: 'Test Post'},
             controller: "GeneralPageController",
@@ -226,7 +226,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         
         // Projects
         .state('projects', {
-            url: "/projects.html",
+            url: "/projects",
             templateUrl: "views/projects.html",            
             data: {pageTitle: 'Projects'},
             controller: "GeneralPageController",
@@ -494,10 +494,10 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         })
 
         // User Profile
-        .state("profile", {
-            url: "/profile",
+        .state("home", {
+            url: "/home",
             templateUrl: "views/profile/main.html",
-            data: {pageTitle: 'User Profile'},
+            data: {pageTitle: 'Home'},
             controller: "UserProfileController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
@@ -505,13 +505,17 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',  
                         insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                         files: [
+                            "../assets/layouts/layout3/css/custom.css",
+                            "../assets/global/plugins/socicon/socicon.css",
                             '../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css',
                             '../assets/pages/css/profile.css',
+                            
                             
                             '../assets/global/plugins/jquery.sparkline.min.js',
                             '../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js',
 
                             '../assets/pages/scripts/profile.min.js',
+                            "../assets/pages/css/about.min.css",
 
                             'js/controllers/UserProfileController.js'
                         ]                    
@@ -520,26 +524,26 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
             }
         })
 
-        // User Profile Dashboard
-        .state("profile.dashboard", {
-            url: "/dashboard",
-            templateUrl: "views/profile/dashboard.html",
-            data: {pageTitle: 'User Profile'}
+        // About Me
+        .state("home.about", {
+            url: "/about",
+            templateUrl: "views/profile/about.html",
+            data: {pageTitle: 'About Me'}
         })
 
-        // User Profile Account
-        .state("profile.account", {
-            url: "/account",
-            templateUrl: "views/profile/account.html",
-            data: {pageTitle: 'User Account'}
-        })
+        // // User Profile Account
+        // .state("home.account", {
+        //     url: "/account",
+        //     templateUrl: "views/profile/account.html",
+        //     data: {pageTitle: 'User Account'}
+        // })
 
-        // User Profile Help
-        .state("profile.help", {
-            url: "/help",
-            templateUrl: "views/profile/help.html",
-            data: {pageTitle: 'User Help'}      
-        })
+        // // User Profile Help
+        // .state("home.help", {
+        //     url: "/help",
+        //     templateUrl: "views/profile/help.html",
+        //     data: {pageTitle: 'User Help'}      
+        // })
 
         // Todo
         .state('todo', {

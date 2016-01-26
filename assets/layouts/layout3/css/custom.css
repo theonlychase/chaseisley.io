@@ -12,3 +12,33 @@
     color: #E35B5A;
     text-decoration: none;
 }
+
+.profile-desc-link a {
+    color: #93a3b5 !important;
+    text-decoration: none;
+}
+
+.profile-desc-link a:hover {
+    color: #E35B5A !important;
+    text-decoration: none;
+}
+
+.profile-desc-link i {
+    color: #E35B5A !important;
+}
+
+.profile-usermenu ul li a i {
+    color: #E35B5A !important;
+}
+
+.profile-usermenu ul li a:hover {
+    color: #E35B5A !important;
+}
+
+.profile-usermenu ul li a {
+    color: #93a3b5;
+}
+
+.heading-red {
+    color: #E35B5A !important;
+}
