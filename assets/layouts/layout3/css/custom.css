@@ -43,6 +43,36 @@
     color: #E35B5A !important;
 }
 
-.about-img {
+.about-img-left {
     padding-left: 20px;
 }
+
+.about-img-right {
+    padding-right: 20px;
+}
+
+.center-text {
+     text-align: center;
+ }
+ 
+ .padding-bottom-20 {
+     padding-bottom: 20px;
+ }
+
+@media (max-width: 992px) {
+    .about-img-right {
+        padding-right: 0;
+    }
+    .about-img-left {
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+ }
+ 
+ @media (max-width: 768px) {
+    .padding-bottom-20 {
+        padding-bottom: 20px;
+    }
+ }
+ 
+ 
