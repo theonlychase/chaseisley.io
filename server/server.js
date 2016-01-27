@@ -5,8 +5,8 @@ var cors        = require('cors');
 var morgan      = require('morgan');
 var path        = require('path');
 
-var port 	    = process.env.PORT || 8080;
-// var port 	    = process.env.PORT || 80;
+// var port 	    = process.env.PORT || 8080;
+var port 	    = process.env.PORT || 80;
 
 // get our request parameters
 app.use(bodyParser.urlencoded({ extended: false }));
