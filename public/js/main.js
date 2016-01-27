@@ -145,9 +145,11 @@ MetronicApp.controller('FooterController', ['$scope', function($scope) {
 }]);
 
 /* Setup Rounting For All Pages */
-MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
     // Redirect any unmatched url
     $urlRouterProvider.otherwise("/home/about");  
+    
+    // $locationProvider.html5Mode(true);
     
     $stateProvider
 
@@ -213,7 +215,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "..assets/layouts/layout3/css/custom.css",
+                            "./assets/layouts/layout3/css/custom.css",
                             "./assets/global/plugins/socicon/socicon.css",
                             "./assets/pages/css/blog.min.css",
                             
