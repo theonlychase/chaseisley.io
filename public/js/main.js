@@ -76,9 +76,9 @@ MetronicApp.factory('settings', ['$rootScope', function($rootScope) {
             pageBodySolid: false, // solid body color state
             pageAutoScrollOnLoad: 1000 // auto scroll to top on page load
         },
-        assetsPath: '../assets',
-        globalPath: '../assets/global',
-        layoutPath: '../assets/layouts/layout3',
+        assetsPath: './assets',
+        globalPath: './assets/global',
+        layoutPath: './assets/layouts/layout3',
     };
 
     $rootScope.settings = settings;
@@ -90,7 +90,7 @@ MetronicApp.factory('settings', ['$rootScope', function($rootScope) {
 MetronicApp.controller('AppController', ['$scope', '$rootScope', function($scope, $rootScope) {
     $scope.$on('$viewContentLoaded', function() {
         App.initComponents(); // init core components
-        //Layout.init(); //  Init entire layout(header, footer, sidebar, etc) on page load if the partials included in server side instead of loading with ng-include directive 
+        Layout.init(); //  Init entire layout(header, footer, sidebar, etc) on page load if the partials included in server side instead of loading with ng-include directive 
     });
 }]);
 
@@ -126,14 +126,14 @@ MetronicApp.controller('HeaderController', ['$scope', function($scope) {
 /* Setup Layout Part - Sidebar */
 MetronicApp.controller('PageHeadController', ['$scope', function($scope) {
     $scope.$on('$includeContentLoaded', function() {        
-        Demo.init(); // init theme panel
+        // Demo.init(); // init theme panel
     });
 }]);
 
 /* Setup Layout Part - Theme Panel */
 MetronicApp.controller('ThemePanelController', ['$scope', function($scope) {    
     $scope.$on('$includeContentLoaded', function() {
-        Demo.init(); // init theme panel
+        // Demo.init(); // init theme panel
     });
 }]);
 
@@ -190,9 +190,9 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "../assets/layouts/layout3/css/custom.css",
-                            "../assets/global/plugins/socicon/socicon.css",
-                            "../assets/pages/css/blog.min.css",
+                            "./assets/layouts/layout3/css/custom.css",
+                            "./assets/global/plugins/socicon/socicon.css",
+                            "./assets/pages/css/blog.min.css",
                             
                             'js/controllers/GeneralPageController.js',
                         ] 
@@ -213,9 +213,9 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "../assets/layouts/layout3/css/custom.css",
-                            "../assets/global/plugins/socicon/socicon.css",
-                            "../assets/pages/css/blog.min.css",
+                            "..assets/layouts/layout3/css/custom.css",
+                            "./assets/global/plugins/socicon/socicon.css",
+                            "./assets/pages/css/blog.min.css",
                             
                             'js/controllers/GeneralPageController.js',
                         ] 
@@ -236,63 +236,15 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "../assets/global/plugins/cubeportfolio/css/cubeportfolio.css",
-                            "../assets/pages/css/portfolio.min.css",
-                            "../assets/layouts/layout3/css/custom.css",
-                            "../assets/global/plugins/socicon/socicon.css",
+                            "./assets/global/plugins/cubeportfolio/css/cubeportfolio.css",
+                            "./assets/pages/css/portfolio.min.css",
+                            "./assets/layouts/layout3/css/custom.css",
+                            "./assets/global/plugins/socicon/socicon.css",
                             
 
                             'js/controllers/GeneralPageController.js'
                         ] 
                     });
-                }]
-            }
-        })
-
-        // AngularJS plugins
-        .state('fileupload', {
-            url: "/file_upload.html",
-            templateUrl: "views/file_upload.html",
-            data: {pageTitle: 'AngularJS File Upload'},
-            controller: "GeneralPageController",
-            resolve: {
-                deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                    return $ocLazyLoad.load([{
-                        name: 'angularFileUpload',
-                        files: [
-                            '../assets/global/plugins/angularjs/plugins/angular-file-upload/angular-file-upload.min.js',
-                        ] 
-                    }, {
-                        name: 'MetronicApp',
-                        files: [
-                            'js/controllers/GeneralPageController.js'
-                        ]
-                    }]);
-                }]
-            }
-        })
-
-        // UI Select
-        .state('uiselect', {
-            url: "/ui_select.html",
-            templateUrl: "views/ui_select.html",
-            data: {pageTitle: 'AngularJS Ui Select'},
-            controller: "UISelectController",
-            resolve: {
-                deps: ['$ocLazyLoad', function($ocLazyLoad) {
-                    return $ocLazyLoad.load([{
-                        name: 'ui.select',
-                        insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
-                        files: [
-                            '../assets/global/plugins/angularjs/plugins/ui-select/select.min.css',
-                            '../assets/global/plugins/angularjs/plugins/ui-select/select.min.js'
-                        ] 
-                    }, {
-                        name: 'MetronicApp',
-                        files: [
-                            'js/controllers/UISelectController.js'
-                        ] 
-                    }]);
                 }]
             }
         })
@@ -309,17 +261,17 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         name: 'MetronicApp',  
                         insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                         files: [
-                            "../assets/layouts/layout3/css/custom.css",
-                            "../assets/global/plugins/socicon/socicon.css",
-                            '../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css',
-                            '../assets/pages/css/profile.css',
+                            "./assets/layouts/layout3/css/custom.css",
+                            "./assets/global/plugins/socicon/socicon.css",
+                            './assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css',
+                            './assets/pages/css/profile.css',
                             
                             
-                            '../assets/global/plugins/jquery.sparkline.min.js',
-                            '../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js',
+                            './assets/global/plugins/jquery.sparkline.min.js',
+                            './assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js',
 
-                            '../assets/pages/scripts/profile.min.js',
-                            "../assets/pages/css/about.min.css",
+                            './assets/pages/scripts/profile.min.js',
+                            "./assets/pages/css/about.min.css",
 
                             'js/controllers/UserProfileController.js'
                         ]                    
