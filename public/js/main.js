@@ -76,9 +76,9 @@ MetronicApp.factory('settings', ['$rootScope', function($rootScope) {
             pageBodySolid: false, // solid body color state
             pageAutoScrollOnLoad: 1000 // auto scroll to top on page load
         },
-        assetsPath: './assets',
-        globalPath: './assets/global',
-        layoutPath: './assets/layouts/layout3',
+        assetsPath: '/assets',
+        globalPath: '/assets/global',
+        layoutPath: '/assets/layouts/layout3',
     };
 
     $rootScope.settings = settings;
@@ -192,9 +192,9 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "./assets/layouts/layout3/css/custom.css",
-                            "./assets/global/plugins/socicon/socicon.css",
-                            "./assets/pages/css/blog.min.css",
+                            "/assets/layouts/layout3/css/custom.css",
+                            "/assets/global/plugins/socicon/socicon.css",
+                            "/assets/pages/css/blog.min.css",
                             
                             'js/controllers/GeneralPageController.js',
                         ] 
@@ -215,9 +215,9 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "./assets/layouts/layout3/css/custom.css",
-                            "./assets/global/plugins/socicon/socicon.css",
-                            "./assets/pages/css/blog.min.css",
+                            "/assets/layouts/layout3/css/custom.css",
+                            "/assets/global/plugins/socicon/socicon.css",
+                            "/assets/pages/css/blog.min.css",
                             
                             'js/controllers/GeneralPageController.js',
                         ] 
@@ -238,8 +238,8 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "./assets/layouts/layout3/css/custom.css",
-                            "./assets/global/plugins/socicon/socicon.css",
+                            "/assets/layouts/layout3/css/custom.css",
+                            "/assets/global/plugins/socicon/socicon.css",
                             
 
                             'js/controllers/GeneralPageController.js'
@@ -261,12 +261,12 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         name: 'MetronicApp',  
                         insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                         files: [
-                            "./assets/layouts/layout3/css/custom.css",
+                            "/assets/layouts/layout3/css/custom.css",
                             
-                            './assets/global/plugins/jquery.sparkline.min.js',
-                            './assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js',
+                            // './assets/global/plugins/jquery.sparkline.min.js',
+                            // './assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js',
 
-                            './assets/pages/scripts/profile.min.js',
+                            '/assets/pages/scripts/profile.min.js',
 
                             'js/controllers/UserProfileController.js'
                         ]                    
