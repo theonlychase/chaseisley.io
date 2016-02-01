@@ -207,7 +207,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         .state('testpost1', {
             url: "/testpost",
             templateUrl: "views/blog/test_post.html",            
-            data: {pageTitle: 'Test Post'},
+            data: {pageTitle: 'Post 1'},
             controller: "GeneralPageController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
