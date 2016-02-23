@@ -238,8 +238,19 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
                             "/assets/layouts/layout3/css/custom.css",
-                            "/assets/global/plugins/socicon/socicon.css",
+                            // "/assets/global/plugins/socicon/socicon.css",                           
+
+                            "/assets/global/plugins/js.cookie.min.js", 
+                            "/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js", 
                             
+                            "/assets/global/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js",                      
+
+                            // "/assets/pages/scripts/portfolio.min.js", 
+                            // "/assets/pages/scripts/portfolio-1.min.js",
+                            // "/assets/pages/scripts/portfolio-2.min.js",
+                            // "/assets/pages/scripts/portfolio-3.min.js",
+                            // "/assets/pages/scripts/portfolio-4.min.js",
+
 
                             'js/controllers/GeneralPageController.js'
                         ] 
