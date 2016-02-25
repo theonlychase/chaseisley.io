@@ -205,7 +205,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         
         // Blog
         .state('testpost1', {
-            url: "/testpost",
+            url: "/freecodecamp-basic-javascript-algorithm-problems-&-solutions",
             templateUrl: "views/blog/test_post.html",            
             data: {pageTitle: 'FreeCodeCamp Basic Javascript Algorithm Problems (& Solutions)'},
             controller: "GeneralPageController",
