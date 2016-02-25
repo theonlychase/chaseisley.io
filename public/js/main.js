@@ -207,7 +207,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         .state('testpost1', {
             url: "/testpost",
             templateUrl: "views/blog/test_post.html",            
-            data: {pageTitle: 'Post 1'},
+            data: {pageTitle: 'FreeCodeCamp Basic Javascript Algorithm Problems (& Solutions)'},
             controller: "GeneralPageController",
             resolve: {
                 deps: ['$ocLazyLoad', function($ocLazyLoad) {
