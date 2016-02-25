@@ -57,7 +57,7 @@ reverseString("hello");
                                     <!-- BEGIN PORTLET-->
                                     <div class="portlet light">
                                         <div class="portlet-body">
-                                            <textarea id="code_editor_demo_1">function reverseString(str) {
+                                            <textarea id="code_editor_demo_2">function reverseString(str) {
     return str.split("").reverse().join("");                                                
 }
 reverseString("hello"); 
@@ -268,12 +268,24 @@ reverseString("hello");
             mode: 'javascript'
         });
     }
+    
+    var handleDemo2 = function () {
+        var myTextArea = document.getElementById('code_editor_demo_2');
+        var myCodeMirror = CodeMirror.fromTextArea(myTextArea, {
+            lineNumbers: true,
+            matchBrackets: true,
+            styleActiveLine: true,
+            theme:"ambiance",
+            mode: 'javascript'
+        });
+    }
 
 
     return {
         //main function to initiate the module
         init: function () {
             handleDemo1();
+            handleDemo2();
         }
     };
 
