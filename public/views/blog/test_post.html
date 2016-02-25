@@ -38,11 +38,38 @@ reverseString("hello");
                                 </div>
                                 
                             </div>
-                            <p>Step 1: You want to turn the passed in string into an array. Since I am passing in the string "hello", then
-                                I will start out by using the "Split Method". <br>Since we have a function, we want to return something, 
-                                so the code would start off with a return statement, which is: <br><br><strong>return str.split("");</strong>
+                            <p><strong>Step 1:</strong> We want to turn the passed in string into an array. Since we are passing in the string "hello", then
+                                we will start out by using the "Split Method". <br>Since we have a function, we want to return something, 
+                                so the code would start off with a return statement, which is: <br><br><i>return str.split("");</i>
                                 <br><br>What this does is splits each letter in the string, and makes an array.
-                                This is what is returned: <br><br><strong>[h,e,l,l,o]</strong>.
+                                This is what is returned: <br><br><i>["h","e","l","l","o"]</i>.
+                            </p>
+                            <p><strong>Step 2:</strong> We want to reverse the elements in the array. We can easily do this with the "Reverse Method".<br>
+                                The code looks like this:<br><br><i>return str.split("").reverse();</i><br><br>
+                                This is what is returned: <br><br><i>["o","l","l","e","h"]</i>
+                            </p>
+                            <p><strong>Step 3:</strong> Now that the array is reversed, our last step is to make the array a String. We do this with the "Join Method".<br><br>
+                                What the join method does is join the elements of the array into a String. Since our array has been reversed, we simply add
+                                join("") to the end of our return statement. What goes inside the parentheses of join("") is called the seperator. By default, the separator is a comma (,).
+                                Since we have (""), that means that the array will become a String with no spaces between each element. <br>The code looks like this:<br><br><i>return str.split("").reverse().join("");</i><br><br>
+                                The final result returned is:
+                             <div class="col-md-12">
+                                    <!-- BEGIN PORTLET-->
+                                    <div class="portlet light">
+                                        <div class="portlet-body">
+                                            <textarea id="code_editor_demo_1">function reverseString(str) {
+    return str.split("").reverse().join("");                                                
+}
+reverseString("hello"); 
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <!-- END PORTLET-->
+                                </div>   
+                                
+                             
+                                
+                              
                             </p>
                                             
 

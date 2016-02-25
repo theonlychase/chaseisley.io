@@ -222,6 +222,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                             
                             "/assets/global/plugins/codemirror/lib/codemirror.js", 
                             "/assets/global/plugins/codemirror/mode/javascript/javascript.js", 
+                            "/assets/global/plugins/codemirror/mode/css/css.js",
                             // "/assets/global/plugins/codemirror/mode/htmlmixed/htmlmixed.js", 
                             
                             // "/assets/pages/scripts/components-code-editors.min.js",
