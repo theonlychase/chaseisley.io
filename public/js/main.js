@@ -149,7 +149,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     // Redirect any unmatched url
     $urlRouterProvider.otherwise("/home/about");  
     
-    // $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true).hashPrefix('!');
     
     $stateProvider
 
@@ -292,20 +292,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             templateUrl: "views/profile/about.html",
             data: {pageTitle: 'About Me'}
         })
-
-        // // User Profile Account
-        // .state("home.account", {
-        //     url: "/account",
-        //     templateUrl: "views/profile/account.html",
-        //     data: {pageTitle: 'User Account'}
-        // })
-
-        // // User Profile Help
-        // .state("home.help", {
-        //     url: "/help",
-        //     templateUrl: "views/profile/help.html",
-        //     data: {pageTitle: 'User Help'}      
-        // })
+        
 }]);
 
 /* Init global settings and run the app */
