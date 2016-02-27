@@ -215,18 +215,9 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         name: 'MetronicApp',
                         insertBefore: '#ng_load_plugins_before', // load the above css files before a LINK element with this ID. Dynamic CSS files must be loaded between core and theme css files
                         files: [
-                            "/assets/layouts/layout3/css/custom.css",
+                            "/assets/layouts/layout3/css/custom.css",                                                   
                             
-                            // "/assets/global/plugins/js.cookie.min.js",
-                            // "/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js",
-                            
-                            "/assets/global/plugins/codemirror/lib/codemirror.js", 
-                            "/assets/global/plugins/codemirror/mode/javascript/javascript.js", 
-                            // "/assets/global/plugins/codemirror/mode/css/css.js",
-                            // "/assets/global/plugins/codemirror/mode/htmlmixed/htmlmixed.js", 
-                            
-                            "/assets/pages/scripts/components-code-editors.min.js",
-                            
+                            "/assets/global/plugins/codemirror/lib/codemirror.js",                         
                             
                             'js/controllers/GeneralPageController.js',
                         ] 
