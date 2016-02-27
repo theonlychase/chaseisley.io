@@ -149,7 +149,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     // Redirect any unmatched url
     $urlRouterProvider.otherwise("/home/about");  
     
-    $locationProvider.html5Mode(true).hashPrefix('!');
+    // $locationProvider.html5Mode(true);
     
     $stateProvider
 
