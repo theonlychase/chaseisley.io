@@ -85,3 +85,14 @@
      text-decoration: none;
  }
  
+ .solution {
+     font-weight: 700;
+     color: #4e5a64;
+ }
+ 
+ .blog-italic {
+    font-size: 16px;
+    color: #7e8691;
+    line-height: 24px;
+ }
+ 

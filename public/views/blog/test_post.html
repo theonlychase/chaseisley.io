@@ -20,8 +20,9 @@
                                     <div class="blog-single-desc">
                                         <p> Recently I have been working through the Basic JS algorithmic probems at <a class="link-hover" target="_blank" href="http://www.freecodecamp.com">FreeCodeCamp</a>. Some of the problems were a little tough, so I decided to 
                                         write a post on how I worked through these problems. </p>
-                                        <a class="link-hover" target="_blank" href="http://www.freecodecamp.com/challenges/reverse-a-string"><h3>Reverse a String</h3></a>
+                                        <a class="link-hover" target="_blank" href="http://www.freecodecamp.com/challenges/reverse-a-string"><h3>Reverse a String</h3></a><br/>                                       
                                         <p>This one is fairly simple. There are many ways to solve this, but I am going to show you two different ways that I solved it.</p>
+                                        <h4 class="solution">Solution 1</h4>
                                         <p>The first way I solved it was using the split(), reverse(), and join() methods. Here is the problem below</p>
                                         <div class="row">
                                 <div class="col-md-12">
@@ -52,7 +53,7 @@ reverseString("hello");
                                 What the join method does is join the elements of the array into a String. Since our array has been reversed, we simply add
                                 join("") to the end of our return statement. What goes inside the parentheses of join("") is called the seperator. By default, the separator is a comma (,).
                                 Since we have (""), that means that the array will become a String with no spaces between each element. <br>The code looks like this:<br><br><i>return str.split("").reverse().join("");</i><br><br>
-                                The final result returned is:
+                                The final result returned is:</p>
                              <div class="col-md-12">
                                     <!-- BEGIN PORTLET-->
                                     <div class="portlet light">
@@ -67,12 +68,22 @@ reverseString("hello");
                                         </div>
                                     </div>
                                     <!-- END PORTLET-->
-                                </div>   
+                                </div> 
+                                <h4 class="solution">Solution 2</h4>  
+                                <p>The second way I solved it was using a reverse for loop with concatenation</p>
+                                <p><strong>Step 1:</strong> We want to create a new variable and set it to an empty string.<br><br>
+                                <i>var reverseStr = "";</i>
+                                <p><strong>Step 2:</strong> We want to create a for loop, but instead of starting the loop from the beginning of the passed-in string,
+                                we want to start from the end of the passed-in string. We set it up like this:</p>
+                                <i class="blog-italic">for (var i = str.length - 1; i >= 0; i--)</i>
+                                
+                                
+                                
                                 
                              
                                 
                               
-                            </p>
+                           
                                             
 
                             
