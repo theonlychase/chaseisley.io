@@ -73,9 +73,14 @@ reverseString("hello");
                                 <p>The second way I solved it was using a reverse for loop with concatenation</p>
                                 <p><strong>Step 1:</strong> We want to create a new variable and set it to an empty string.<br><br>
                                 <i>var reverseStr = "";</i>
+                                </p>
                                 <p><strong>Step 2:</strong> We want to create a for loop, but instead of starting the loop from the beginning of the passed-in string,
-                                we want to start from the end of the passed-in string. We set it up like this:</p>
-                                <i class="blog-italic">for (var i = str.length - 1; i >= 0; i--)</i>
+                                we want to start from the end of the passed-in string. We set it up like this:<br><br>
+                                <i>for (var i = str.length - 1; i >= 0; i--)</i>
+                                </p>
+                                <p><strong>Step 3:</strong> We want to add each iteration of the for loop to our empty reverseStr string. We achieve that with the following code:<br><br>
+                                <i>reverseStr += str[i];</i>
+                                </p>
                                 
                                 
                                 
