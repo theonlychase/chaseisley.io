@@ -77,6 +77,9 @@ reverseString("hello");
                                 <p><strong>Step 2:</strong> We want to create a for loop, but instead of starting the loop from the beginning of the passed-in string,
                                 we want to start from the end of the passed-in string. We set it up like this:<br><br>
                                 <i>for (var i = str.length - 1; i >= 0; i--)</i>
+                                <p>Remember, a string has a 0 based index, which is why we set variable i to str.length - 1. str.length by itself is 5. 
+                                   If we left var i = str.length, when the for loop runs, it will start at index 5, which is undefined if we pass
+                                   in the string "hello". The last index of "hello" is 4.</p>
                                 </p>
                                 <p><strong>Step 3:</strong> We want to add each iteration of the for loop to our empty reverseStr string. We achieve that with the following code:<br><br>
                                 <i>reverseStr += str[i];</i>
