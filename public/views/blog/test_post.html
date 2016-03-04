@@ -18,8 +18,8 @@
                                         <img src="http://i.imgur.com/BwmT69Q.jpg" /> 
                                     </div>
                                     <div class="blog-single-desc">
-                                        <p> Recently I have been working through the Basic JS algorithmic probems at <a class="link-hover" target="_blank" href="http://www.freecodecamp.com">FreeCodeCamp</a>. Some of the problems were a little tough, so I decided to 
-                                        write a post on how I worked through these problems. </p>
+                                        <p> Recently I have been working through the Basic JS algorithmic probems at <a class="link-hover" target="_blank" href="http://www.freecodecamp.com">FreeCodeCamp</a>. When I first started learning Javascript
+                                        some of these problems were pretty tough, so I decided to write a post on how I worked through these problems. </p>
                                         <a class="link-hover" target="_blank" href="http://www.freecodecamp.com/challenges/reverse-a-string"><h3>Reverse a String</h3></a><br/>                                       
                                         <p>This one is fairly simple. There are many ways to solve this, but I am going to show you two different ways that I solved it.</p>
                                         <h4 class="solution">Solution 1</h4>
@@ -70,7 +70,7 @@ reverseString("hello");
                                     <!-- END PORTLET-->
                                 </div> 
                                 <h4 class="solution">Solution 2</h4>  
-                                <p>The second way I solved it was using a reverse for loop with concatenation</p>
+                                <p>The second way I solved it was using a reverse for loop with concatenation.</p>
                                 <p><strong>Step 1:</strong> We want to create a new variable and set it to an empty string.<br><br>
                                 <i>var reverseStr = "";</i>
                                 </p>
@@ -83,6 +83,8 @@ reverseString("hello");
                                 </p>
                                 <p><strong>Step 3:</strong> We want to add each iteration of the for loop to our empty reverseStr string. We achieve that with the following code:<br><br>
                                 <i>reverseStr += str[i];</i>
+                                <p>Remember, when the loop starts, it starts at the end of our passed in string, which in this case, is the letter "o" in "hello". This is because
+                                     i = str.length - 1 = 4, where 4 is an index of 4. Once the loop completes, our final reverseStr is returned. The final answer is below:</p>
                                 </p>
                                 
                                 
