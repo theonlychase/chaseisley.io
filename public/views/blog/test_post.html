@@ -86,6 +86,27 @@ reverseString("hello");
                                 <p>Remember, when the loop starts, it starts at the end of our passed in string, which in this case, is the letter "o" in "hello". This is because
                                      i = str.length - 1 = 4, where 4 is an index of 4. Once the loop completes, our final reverseStr is returned. The final answer is below:</p>
                                 </p>
+                                <div class="col-md-12">
+                                    <!-- BEGIN PORTLET-->
+                                    <div class="portlet light">
+                                        <div class="portlet-body">
+                                            <textarea id="code_editor_demo_3">function reverseString(str) {
+    var reverseStr = "";
+    
+    for (var i = str.length - 1; i >= 0; i--) {
+        reverseStr += str[i];
+    }
+    return reverseStr;
+}
+
+reverseString("hello");
+
+//olleh
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <!-- END PORTLET-->
+                                </div>
                                 
                                 
                                 
@@ -282,6 +303,17 @@ reverseString("hello");
             mode: 'javascript'
         });
     }
+    
+    var handleDemo3 = function () {
+        var myTextArea = document.getElementById('code_editor_demo_3');
+        var myCodeMirror = CodeMirror.fromTextArea(myTextArea, {
+            lineNumbers: true,
+            matchBrackets: true,
+            styleActiveLine: true,
+            theme:"ambiance",
+            mode: 'javascript'
+        });
+    }
 
 
     return {
@@ -289,6 +321,7 @@ reverseString("hello");
         init: function () {
             handleDemo1();
             handleDemo2();
+            handleDemo3();
         }
     };
 
