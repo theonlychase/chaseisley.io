@@ -25,18 +25,20 @@
                                         <h4 class="solution">Solution 1</h4>
                                         <p>The first way I solved it was using the split(), reverse(), and join() methods. Here is the problem below</p>
                                         <div class="row">
-                                <div class="col-md-12">
-                                    <!-- BEGIN PORTLET-->
-                                    <div class="portlet light ">
-                                        <div class="portlet-body">
-                                            <textarea id="code_editor_demo_1">function reverseString(str) {
+                                            <div class="col-md-12">
+                                                <!-- BEGIN PORTLET-->
+                                                <div class="portlet light ">
+                                                    <div class="portlet-body">
+                                                        <textarea id="code_editor_demo_1">function reverseString(str) {
+ 
 }
+
 reverseString("hello"); 
-                                            </textarea>
-                                        </div>
-                                    </div>
-                                    <!-- END PORTLET-->
-                                </div>
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <!-- END PORTLET-->
+                                            </div>
                                 
                             </div>
                             <p><strong>Step 1:</strong> We want to turn the passed in string into an array. Since we are passing in the string "hello", then
@@ -107,7 +109,26 @@ reverseString("hello");
                                     </div>
                                     <!-- END PORTLET-->
                                 </div>
-                                
+                                <a class="link-hover" target="_blank" href="https://www.freecodecamp.com/challenges/factorialize-a-number"><h3>Factorialize A Number</h3></a><br/>                                       
+                                <h4 class="solution">Solution 1</h4>
+                                <p>The first way I solved it was using the split(), reverse(), and join() methods. Here is the problem below</p>
+                                <div class="col-md-12">
+                                    <!-- BEGIN PORTLET-->
+                                    <div class="portlet light">
+                                        <div class="portlet-body">
+                                            <textarea id="code_editor_demo_4">function factorialize(num) {
+  var mult = 1;
+  for (var i = num; i > 0; i--) {
+    mult *= i;
+  }
+  return mult;
+}
+
+factorialize(5);
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                    <!-- END PORTLET-->
                                 
                                 
                                 
@@ -314,6 +335,17 @@ reverseString("hello");
             mode: 'javascript'
         });
     }
+    
+    var handleDemo4 = function () {
+        var myTextArea = document.getElementById('code_editor_demo_4');
+        var myCodeMirror = CodeMirror.fromTextArea(myTextArea, {
+            lineNumbers: true,
+            matchBrackets: true,
+            styleActiveLine: true,
+            theme:"ambiance",
+            mode: 'javascript'
+        });
+    }
 
 
     return {
@@ -322,6 +354,7 @@ reverseString("hello");
             handleDemo1();
             handleDemo2();
             handleDemo3();
+            handleDemo4();
         }
     };
 
